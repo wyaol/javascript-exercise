@@ -1,5 +1,8 @@
 function fetchData(url) {
-  return fetch(url);
+  return fetch(url).then(response => {
+    if (response.status === 200) return response.json();
+    return Promise.reject();
+  });
 }
 
 const URL = 'http://localhost:3000/api';
