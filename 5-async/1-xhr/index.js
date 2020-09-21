@@ -7,6 +7,7 @@ function fetchData(url, successCallback, errorCallback) {
     if (xhr.status === 200) successCallback(xhr.responseText);
     else errorCallback(xhr.responseText);
   };
+  xhr.send();
   // end -->
 }
 
