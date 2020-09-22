@@ -1,7 +1,4 @@
 export default function find00OldPerson(collection) {
-  let res;
-  collection.forEach(person => {
-    if (person.age > 10 && person.age < 20) res = person.name;
-  });
-  return res;
+  const res = collection.find(item => item.age < 20 && item.age > 10);
+  return res.name;
 }
